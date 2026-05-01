@@ -16,16 +16,18 @@ p{@apply text-justify indent-5}
 h1{@apply text-center m-[0.2ch] text-3xl}
 h2{@apply m-[0.2ch] text-xl}
 #nav_bar{
-    @apply flex w-[calc(100%)]
-    h-7
-    gap-2.5
+    @apply w-[calc(100%)] h-7
     text-[20px]
     px-3 py-0
     items-center
     text-black;
+    flex-direction: row;
     background-color: rgb(255, 255, 255);
     background-image: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(166, 166, 166, 1) 100%);
     box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+#nav_bar > nav{
+    @apply flex gap-3
 }
 body{
     font-family: "Ubuntu", sans-serif;

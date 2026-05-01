@@ -1,0 +1,56 @@
+{
+    "lingua":{
+        "pt":[
+            {
+                "id":0,
+                "title":"Placeholder 2",
+                "image":"/puffy.png",
+                "url":"https://www.google.com",
+                "local":false,
+                "desc":"lorem ipsum dolor seu cookie"
+            },
+            {
+                "id":1,
+                "title":"eu amo vivecraft",
+                "image":"/Untitled.png",
+                "url":"https://www.placehold.co",
+                "local":false,
+                "desc":"PLACE A HOLDER"
+            },
+            {
+                "id":2,
+                "title":"PEGUE SEU PUFFY HOJE",
+                "image":"/puffy.png",
+                "url":"/puffy.png",
+                "local":false,
+                "desc":"desculpe mas isso é um placeholder"
+            }
+        ],
+        "eng":[
+            {
+                "id":0,
+                "title":"Placeholder 2",
+                "image":"/puffy.png",
+                "url":"https://www.google.com",
+                "local":false,
+                "desc":"lorem ipsum dolor your cookie"
+            },
+            {
+                "id":1,
+                "title":"i love vivecraft",
+                "image":"/Untitled.png",
+                "url":"https://www.placehold.co",
+                "local":false,
+                "desc":"PLACE A HOLDER"
+            },
+            {
+                "id":2,
+                "title":"GET YOUR PUFFY TODAY",
+                "image":"/puffy.png",
+                "url":"/puffy.png",
+                "local":false,
+                "desc":"sorry this is a placeholder"
+            }
+        ]
+    }
+}
