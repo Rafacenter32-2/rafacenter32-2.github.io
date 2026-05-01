@@ -16,5 +16,8 @@
 	</nav>
 </header>
 <svelte:body></svelte:body>
-<svelte:head><link rel="icon" href="puffy.png" /></svelte:head>
+<svelte:head>
+	<link rel="icon" href="puffy.png"/>
+	<title>Rafacenter Web</title>
+</svelte:head>
 {@render children()}

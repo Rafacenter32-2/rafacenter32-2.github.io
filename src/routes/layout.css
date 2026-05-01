@@ -27,7 +27,15 @@ h2{@apply m-[0.2ch] text-xl}
     box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 #nav_bar > nav{
-    @apply flex gap-3
+    @apply flex
+}
+#nav_bar > nav > *:not(:last-child)::after{
+    content: "|";
+    font-style: italic;
+    font-weight: 500;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    opacity: 0.3;
 }
 body{
     font-family: "Ubuntu", sans-serif;
