@@ -1,10 +1,12 @@
 import adapter from '@sveltejs/adapter-auto';
+import { mdsvex } from 'mdsvex';
 import { relative, sep } from 'node:path';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: vitePreprocess(),
+	preprocess: [vitePreprocess(),mdsvex({extensions: ['.md']})],
+	extensions:['.svelte','.md'],
 	compilerOptions: {
 		// defaults to rune mode for the project, execept for `node_modules`. Can be removed in svelte 6.
 		runes: ({ filename }) => {
@@ -19,7 +21,7 @@ const config = {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter()
+		adapter: adapter(),
 	}
 };
 
