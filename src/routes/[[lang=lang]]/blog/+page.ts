@@ -1,7 +1,7 @@
 /* cocô de IA aqui em baixo :(
  se voce tentar rescrever, ou só tentar ler esse codigo, e não conseguir
  aumente esse contador
- tempo_disperdiçado:1.5h
+ tempo_disperdiçado:1h
 
  odeio o escrever codigo de lado do servidor quando se usa svelte kit 😣
 */
