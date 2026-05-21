@@ -28,6 +28,8 @@
         overflow-x: hidden;
     }
 </style>
-<article>
-    <Content />
-</article>
+<div class="flex flex-col items-center">
+    <article class="box min-w-115">
+        <Content />
+    </article>
+</div>
