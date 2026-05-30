@@ -15,7 +15,6 @@
     */
    let Content = $derived(data.content)
 </script>
-<!-- TODO: colocar css real aqui -->
 <style>
     :global(body){
         background-color: black;
@@ -30,6 +29,10 @@
 </style>
 <div class="flex flex-col items-center">
     <article class="box min-w-115">
-        <Content />
+        <!--
+        <div class="bg-white text-black text-shadow-none rounded-xl p-1.5">
+        </div>
+        -->
+            <Content />
     </article>
 </div>

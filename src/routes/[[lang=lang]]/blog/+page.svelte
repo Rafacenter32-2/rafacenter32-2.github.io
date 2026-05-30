@@ -25,18 +25,26 @@
         overflow-x: hidden;
     }
 </style>
-<main class="flex flex-col items-center">
+<main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
     <section class="box">
         <h1>meu Blog ^-^</h1>
     </section>
-    <section class="box">
-    {#each data.posts as posts, i (posts.slug)}
-        <!-- TODO: fazer isso um link -->
-        <a href={resolve(`${pathname}/${posts.slug!}`)} class="text-cyan-400 underline font-semibold">{posts.title}</a>
-        {#if i !== data.posts.length - 1}
-
-        <div class="w-full h-0.5 bg-lime-600 mt-1 rounded-full"></div>
-        {/if}
-    {/each}
+    {#each data.posts as posts (posts.slug)}
+    <section class="box">  
+        <a href={resolve(`${pathname}/${posts.slug!}`)}>
+            <div class="flex flex-col">
+                <img src={posts.img} alt="" class="rounded-2xl">
+                <div>
+                    <h1 class=" font-semibold">
+                        {posts.title}
+                    </h1>
+                    <p class="text-xs">
+                        {posts.preview}
+                    </p>
+                </div>
+            </div>
+        </a>
     </section>
+
+    {/each}
 </main>
