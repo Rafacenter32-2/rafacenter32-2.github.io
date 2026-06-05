@@ -16,7 +16,7 @@
 <style>
 
 </style>
-<div id="enable_background_1"></div>
+<div id="enable_background_2"></div>
 <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     <section class="box">
         <h1>meu Blog ^-^</h1>
