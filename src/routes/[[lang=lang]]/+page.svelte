@@ -23,16 +23,9 @@
     ]
 </script>
 <style>
-    :global(body){
-        background-color: black;
-        color: whitesmoke;
-        background-image: url("/Background.png");
-        background-size: cover;
-        background-position: center 30%;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
+
 </style>
+<div id="enable_background_2"></div>
 <main class="flex flex-col items-center">
     <section class="box">
         <h1>
@@ -53,9 +46,9 @@
         <h2 class="text-center">Links:</h2>
         <ul class="flex gap-2">
             {#each links as {icon, plat,url}(url)}
-                <li>
-                    <a href={url} rel="external"><img src={icon} alt={plat} class="h-10 bg-black p-1 rounded-full"></a>
-                </li>
+            <li>
+                <a href={url} rel="external"><img src={icon} alt={plat} class="h-10 bg-black p-1 rounded-full"></a>
+            </li>
             {/each}
         </ul>
     </section>

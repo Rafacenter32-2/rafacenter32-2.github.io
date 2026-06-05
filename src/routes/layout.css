@@ -16,8 +16,33 @@ p{@apply text-justify indent-5}
 h1{@apply text-center m-[0.2ch] text-3xl}
 h2{@apply m-[0.2ch] text-xl}
 hr{@apply my-1 text-emerald-600 border-dotted border-t-3}
+body:has(#enable_background_1:empty){
+    background-color: black;
+    color: whitesmoke;
+    background-image: url("/Background.png");
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+body:has(#enable_background_2:empty){
+    background-color: black;
+    background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+    color: whitesmoke;
+    overflow-x: hidden;
+}
 #nav_bar{
     @apply w-[calc(100%)] h-7
+
     text-[20px]
     px-3 py-0
     items-center
@@ -41,4 +66,13 @@ hr{@apply my-1 text-emerald-600 border-dotted border-t-3}
 body{
     font-family: "Ubuntu", sans-serif;
     margin: 0;
+}
+pre:has(code){
+    background-color: #151515;
+    color: whitesmoke;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+    border: #101010 solid 0.5rem;
+
 }

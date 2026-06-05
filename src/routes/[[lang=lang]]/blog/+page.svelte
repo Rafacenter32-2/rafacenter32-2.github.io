@@ -14,18 +14,10 @@
     //}
 </script>
 <style>
-    :global(body){
-        background-color: black;
-        color: whitesmoke;
-        background-image: url("/Background.png");
-        background-size: cover;
-        background-position: center 30%;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        overflow-x: hidden;
-    }
+
 </style>
-<main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+<div id="enable_background_1"></div>
+<main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     <section class="box">
         <h1>meu Blog ^-^</h1>
     </section>

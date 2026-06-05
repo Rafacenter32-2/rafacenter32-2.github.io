@@ -23,7 +23,7 @@ export async function load() {
         .replace(/\n+/g, ' ')
         .replace(/\s+/g, ' ')
         .trim();
-        const preview = plain.length > 160 ? `${plain.substring(0,15)}...` : plain
+        const preview = plain.length > 60 ? `${plain.substring(0,60)}...` : plain
         const slug = path.split('/').pop()?.replace('.md', '');
 const metadata = (file as { metadata: { title: string, img:string } }).metadata;
         return {

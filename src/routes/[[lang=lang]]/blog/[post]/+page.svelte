@@ -16,23 +16,13 @@
    let Content = $derived(data.content)
 </script>
 <style>
-    :global(body){
-        background-color: black;
-        color: whitesmoke;
-        background-image: url("/Background.png");
-        background-size: cover;
-        background-position: center 30%;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        overflow-x: hidden;
-    }
+    
 </style>
+<div id="enable_background_2"></div>
 <div class="flex flex-col items-center">
-    <article class="box min-w-115">
-        <!--
+    <article class="box w-full! max-w-3/4!">
         <div class="bg-white text-black text-shadow-none rounded-xl p-1.5">
-        </div>
-        -->
             <Content />
+        </div>
     </article>
 </div>

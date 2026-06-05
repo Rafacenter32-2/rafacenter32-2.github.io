@@ -6,10 +6,21 @@
 	let lingua_link = $derived(lingua === "pt" ? "" : "eng")
 
 	let { children } = $props();
+	function get_page_name(url:string) {
+		let name = url.split("/").at(-1)
+		if (name == "" || typeof name == "undefined") {
+			name = "inicio"
+		}
+
+		name = decodeURIComponent(name)
+		
+		return name
+	}
 </script>
 
 <header id="nav_bar">
 	<nav>
+		<span class="text-white text-shadow-[0_0_7px_rgb(0,0,0),0_0_9px_rgb(255,255,255),0_0_5px_rgb(255,255,255)] select-none font-black">{get_page_name(page.url.pathname)}</span>
 		<a href={resolve('/')}>inicio</a>
 		<a href={resolve('/'+lingua_link+'/projetos')}>projetos</a>
 		<a href="https://example.com/">não sei</a>
