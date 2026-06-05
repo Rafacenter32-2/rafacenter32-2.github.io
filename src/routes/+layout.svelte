@@ -10,6 +10,8 @@
 		let name = url.split("/").at(-1)
 		if (name == "" || typeof name == "undefined") {
 			name = "inicio"
+		}else if (name == "eng") {
+			name= "start"
 		}
 
 		name = decodeURIComponent(name)
@@ -23,12 +25,13 @@
 		<span class="text-white text-shadow-[0_0_7px_rgb(0,0,0),0_0_9px_rgb(255,255,255),0_0_5px_rgb(255,255,255)] select-none font-black">{get_page_name(page.url.pathname)}</span>
 		<a href={resolve('/')}>inicio</a>
 		<a href={resolve('/'+lingua_link+'/projetos')}>projetos</a>
+		<a href={resolve('/'+lingua_link+'/blog')}>blog</a>
 		<a href="https://example.com/">não sei</a>
 	</nav>
 </header>
 <svelte:body></svelte:body>
 <svelte:head>
-	<link rel="icon" href="puffy.png"/>
+	<link rel="icon" href="/puffy.png"/>
 	<title>Rafacenter Web</title>
 </svelte:head>
 {@render children()}
