@@ -7,12 +7,12 @@
     let textos = {
         pt:[
             "Um bobinho que ainda sabe muito mais de tecnologia que deveria",
-            "Bem vindo ao meu grão de areia da internet :D",
+            "Bem vindo ao meu grão de areia pessoal da internet :D",
             "(serio, tem 1,2 bilhões de websites, isso seria um website a cada 8 pessoas do planeta)"
         ],
         eng:[
-            "a silly person that still knows too much about tech than i should",
-            "Welcome to my sand grain on the internet",
+            "a silly guy that still knows too much about tech than i should",
+            "Welcome to my own personal sand grain on the internet :D",
             "(seriously, there is 1.2 billion websites, this would be 1 website for every 8 people on the planet"
         ]
     }
