@@ -7,6 +7,8 @@
 	let lingua_link = $derived(lingua === "pt" ? "" : "eng")
 	const TL = (pt:string,eng:string)=>{if (lingua === "eng") {return eng}else if(lingua === "pt"){return pt}}
 	let start_open:boolean = $state(false)
+	let start_transition:boolean = false
+	let start_menu = $state<HTMLDivElement | null>(null)
 
 	let { children } = $props();
 	function get_page_name(url:string) {
@@ -22,9 +24,17 @@
 		return name
 	}
 </script>
+<svelte:window onmousedown={(event)=>{
+	if (start_open) {
+		const target = event.target as Node;
+		if (start_menu && !start_menu.contains(target)) {
+			start_open = false
+		}
+	}
+}}></svelte:window>
 <header id="nav_bar">
 	<nav>
-		<button class="inline-block" onclick={()=>{start_open = !start_open}}>
+		<button class="inline-block" onclick={()=>{if (!start_transition) {start_open = !start_open} else {start_transition = false}}} onmousedown={()=>{if (start_open) {start_transition = true}}}>
 			<span class="bg-white rounded-lg cursor-pointer active:bg-gray-400 {start_open ? 'invert':''}">
 				<img src={menu} alt="" class="w-6 h-6 inline -mt-0.75">
 			</span>
@@ -35,8 +45,9 @@
 		<a href={resolve('/'+lingua_link+'/blog')}>blog</a>
 		
 	</nav>
+	<div id="menu" class="{start_open ? "" : "hidden"}" bind:this={start_menu}>
+	</div>
 </header>
-<svelte:body></svelte:body>
 <svelte:head>
 	<link rel="icon" href="/puffy.png"/>
 	<title>Rafacenter Web</title>

@@ -45,11 +45,17 @@ background-size: 20px 20px;
     text-[20px]
     px-3 py-0
     items-center
+    z-50
     text-black;
     flex-direction: row;
     background-color: rgb(255, 255, 255);
     background-image: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(166, 166, 166, 1) 100%);
     box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+#menu{
+    @apply absolute top-10 left-3 w-120 h-96 z-50 rounded-2xl;
+    background: linear-gradient(0deg,rgb(136, 136, 136) 0%, rgba(222, 222, 222, 1) 100%);
+    border: 2mm solid rgb(120, 120, 120)
 }
 #nav_bar > nav{
     @apply flex;
