@@ -24,7 +24,7 @@
 <header id="nav_bar">
 	<nav>
 		<span class="text-white text-shadow-[0_0_7px_rgb(0,0,0),0_0_9px_rgb(255,255,255),0_0_5px_rgb(255,255,255)] select-none font-black">{get_page_name(page.url.pathname)}</span>
-		<a href={resolve('/')}>{TL("inicio","start")}</a>
+		<a href={resolve('/'+lingua_link)}>{TL("inicio","start")}</a>
 		<a href={resolve('/'+lingua_link+'/projetos')}>{TL("projetos","projects")}</a>
 		<a href={resolve('/'+lingua_link+'/blog')}>blog</a>
 		<a href="https://example.com/">{TL("não sei","idk")}</a>
