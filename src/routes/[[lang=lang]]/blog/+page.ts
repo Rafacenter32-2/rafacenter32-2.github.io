@@ -6,12 +6,17 @@
 
  odeio o escrever codigo de lado do servidor quando se usa svelte kit 😣
 */
-export async function load() {
+export async function load({params}) {
+    const lang = params.lang ?? "pt"
     // 'eager' means: "Get the data NOW, don't make me wait"
-    const files = import.meta.glob('$lib/posts/*.md', { eager: true });
-    const rawfiles = import.meta.glob('$lib/posts/*.md', { query: '?raw',eager: true });
+    const files = import.meta.glob('$lib/posts/**/*.md', { eager: true });
+    const rawfiles = import.meta.glob('$lib/posts/**/*.md', { query: '?raw',eager: true });
     // Extract just the titles and the link (slug)
-    const posts = Object.entries(files).map(([path, file]) => {
+    const posts = Object.entries(files)
+        .filter(([path]) => {
+            return path.includes(`/posts/${lang}`)
+        })
+        .map(([path, file]) => {
         const dirtyplain = (rawfiles[path] as any).default
         const plain = dirtyplain
         .replace(/^---[\s\S]*?---/, '')

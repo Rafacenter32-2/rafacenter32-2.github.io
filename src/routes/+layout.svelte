@@ -9,7 +9,7 @@
 	let { children } = $props();
 	function get_page_name(url:string) {
 		let name = url.split("/").at(-1)
-		if (name == "" || typeof name == "undefined") {
+		if (name == "" || typeof name == "undefined" || name == "pt") {
 			name = "inicio"
 		}else if (name == "eng") {
 			name= "start"
