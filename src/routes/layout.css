@@ -73,5 +73,5 @@ pre:has(code){
     border-radius: 0.5rem;
     margin: 0.2rem;
     border: #101010 solid 0.5rem;
-
+    overflow-x: scroll;
 }
