@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
 import { relative, sep } from 'node:path';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
@@ -21,7 +21,24 @@ const config = {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter(),
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: '404.html',
+			precompress: false,
+			strict: true
+		}),
+		prerender: {
+			handleHttpError: ({ path, referrer, message}) =>{
+				if(path.includes('/blog/')) {
+					console.warn("link faltando no blog em"+referrer);
+					return;
+				}
+				
+
+				throw new Error(message)
+			}
+		}
 	}
 };
 
