@@ -1,0 +1,1 @@
+import{a as e,f}from"./DqVtB9oy.js";import{O as r}from"./P6M4kIAa.js";const t={title:"Puffy o puffy"},{title:p}=t;var n=f("<h1>AAAAAA</h1> <p>amo banana</p>",1);function _(o){var a=n();r(2),e(o,a)}const i=Object.freeze(Object.defineProperty({__proto__:null,default:_,metadata:t},Symbol.toStringTag,{value:"Module"}));export{i as _};
