@@ -3,53 +3,37 @@
         "pt":[
             {
                 "id":0,
-                "title":"Placeholder 2",
-                "image":"/puffy.png",
-                "url":"https://www.google.com",
+                "title":"Website",
+                "image":"/website.png",
+                "url":"https://github.com/Rafacenter32-2/Website",
                 "local":false,
-                "desc":"lorem ipsum dolor seu cookie"
+                "desc":"esse website :D"
             },
             {
                 "id":1,
-                "title":"eu amo vivecraft",
-                "image":"/Untitled.png",
-                "url":"https://www.placehold.co",
+                "title":"Pendolos",
+                "image":"/pendulum.png",
+                "url":"https://github.com/Rafacenter32-2/pendolos",
                 "local":false,
-                "desc":"PLACE A HOLDER"
-            },
-            {
-                "id":2,
-                "title":"PEGUE SEU PUFFY HOJE",
-                "image":"/puffy.png",
-                "url":"/puffy.png",
-                "local":false,
-                "desc":"desculpe mas isso é um placeholder"
+                "desc":"simulador de pendolo sem gravidade"
             }
         ],
         "eng":[
             {
                 "id":0,
-                "title":"Placeholder 2",
-                "image":"/puffy.png",
-                "url":"https://www.google.com",
+                "title":"Website",
+                "image":"/website.png",
+                "url":"https://github.com/Rafacenter32-2/Website",
                 "local":false,
-                "desc":"lorem ipsum dolor your cookie"
+                "desc":"This website :D"
             },
             {
                 "id":1,
-                "title":"i love vivecraft",
-                "image":"/Untitled.png",
-                "url":"https://www.placehold.co",
+                "title":"Pendolos",
+                "image":"/pendulum.png",
+                "url":"https://github.com/Rafacenter32-2/pendolos",
                 "local":false,
-                "desc":"PLACE A HOLDER"
-            },
-            {
-                "id":2,
-                "title":"GET YOUR PUFFY TODAY",
-                "image":"/puffy.png",
-                "url":"/puffy.png",
-                "local":false,
-                "desc":"sorry this is a placeholder"
+                "desc":"no-gravity pendulum simulator"
             }
         ]
     }
