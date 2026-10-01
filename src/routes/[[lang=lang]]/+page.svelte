@@ -22,6 +22,7 @@
         {plat:"youtube",url:"https://www.youtube.com/@RafacenterXP",icon:youtube}
     ]
 </script>
+<svelte:head><title>Rafacenter Web</title></svelte:head>
 <style>
 
 </style>

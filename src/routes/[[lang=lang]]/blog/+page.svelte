@@ -16,6 +16,10 @@
 <style>
 
 </style>
+<svelte:head>
+    <title>Rafacenter Blog</title>
+</svelte:head>
+
 <div id="enable_background_2"></div>
 <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     <section class="box">
@@ -40,3 +44,4 @@
 
     {/each}
 </main>
+

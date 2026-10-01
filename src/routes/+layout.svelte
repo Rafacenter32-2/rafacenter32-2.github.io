@@ -21,6 +21,15 @@
 		
 		return name
 	}
+
+	const siteName = "Rafacenter";
+    const domain = "https://rafacenter32-2.github.io"; // Change to your actual domain
+    let currentUrl = $derived(`${domain}${page.url.pathname}`);
+    let description = $derived(
+        lingua === "eng" 
+            ? "Official website, portfolio, and blog of Rafacenter." 
+            : "Website oficial, portfólio e blog do Rafacenter."
+	);
 </script>
 
 <header id="nav_bar">
@@ -37,5 +46,29 @@
 <svelte:head>
 	<link rel="icon" href="/puffy.png"/>
 	<title>Rafacenter Web</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Rafacenter" />
+	<!-- Canonical & Multilingual Alternate Links -->
+    <link rel="canonical" href={currentUrl} />
+    <link rel="alternate" hreflang="pt" href={`${domain}${page.url.pathname.replace("/eng", "")}`} />
+    <link rel="alternate" hreflang="en" href={`${domain}/eng${page.url.pathname.replace("/eng", "")}`} />
+    <link rel="alternate" hreflang="x-default" href={`${domain}${page.url.pathname.replace("/eng", "")}`} />
+
+    <!-- Open Graph (For Social Media & Search Cards) -->
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content="Rafacenter | Official Website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={`${domain}/puffy.png`} />
+    <meta property="og:locale" content={lingua === "eng" ? "en_US" : "pt_BR"} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Rafacenter | Official Website" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${domain}/puffy.png`} />
+
 </svelte:head>
 {@render children()}
