@@ -3,6 +3,7 @@
     import reddit from "$lib/assets/reddit.svg";
     import youtube from "$lib/assets/youtube.png";
     import github from "$lib/assets/github.svg";
+    import itch from "$lib/assets/itch.svg";
     let lingua = $derived((page.params.lang as "pt" | "eng") || 'pt')
     let textos = {
         pt:[
@@ -19,7 +20,8 @@
     const links = [
         {plat:"github",url:"https://github.com/Rafacenter32-2",icon:github},
         {plat:"reddit",url:"https://www.reddit.com/user/No-Educator293/",icon:reddit},
-        {plat:"youtube",url:"https://www.youtube.com/@RafacenterXP",icon:youtube}
+        {plat:"youtube",url:"https://www.youtube.com/@RafacenterXP",icon:youtube},
+        {plat:"itch",url:"https://rafacenter.itch.io/",icon:itch}
     ]
 </script>
 <svelte:head><title>Rafacenter Web</title></svelte:head>
